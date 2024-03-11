@@ -2,3 +2,50 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Set the width of the card to 48% */
+mat-card {
+  width: 48%;
+}
+
+/* Center the text area and button vertically under the card */
+mat-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Set the width of the text area to 100% coz the card itself is already 48% */
+textarea {
+  width: 100%;
+}
+
+/* Set the width of the submit button to 50%, add margin, and center vertically */
+button {
+  width: 50%;
+  margin: auto;
+}
+
+/* Display the text area and mat-expansion-panel side by side, each taking up 50% of the screen */
+mat-card, mat-expansion-panel {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Clear the float after the text area and mat-expansion-panel */
+mat-card::after,
+mat-expansion-panel::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
