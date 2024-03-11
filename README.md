@@ -53,7 +53,15 @@ export class PostListComponent {
 <app-post-list [posts]="posts"></app-post-list>
 ```
 ### Forms for Post Submission:
-- I utilizes the formsmodule and clear the post content upon submission in post-file.comp.ts
+- I utilizes the formsmodule and clear the post content upon submission.
+```ts
+<mat-card>
+  <div>
+    <textarea [(ngModel)]="enteredValue" placeholder="Enter your post..."></textarea>
+  </div>
+  <button (click)="onAddPost()">Submit</button>
+</mat-card>
+```
 ### Styling and Layout:
 - I did take quite a while to get this right, but it is good now. I just go through the instruction line by line and made it work.
 ```css
