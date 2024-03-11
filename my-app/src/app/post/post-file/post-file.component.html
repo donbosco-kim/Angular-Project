@@ -1,5 +1,5 @@
 
-<!-- First mat-card with textarea and submit button -->
+<!--First mat-card with textarea and submit button-->
 <mat-card>
   <div>
     <textarea [(ngModel)]="enteredValue" placeholder="Enter your post..."></textarea>
@@ -8,16 +8,7 @@
 </mat-card>
 
 
-<!-- Second mat-card with mat-expansion-panel -->
-<div>
-  <mat-card>
-    <mat-expansion-panel *ngFor="let post of posts">
-      <mat-expansion-panel-header>
-        <p>{{ post.text }}</p>
-      </mat-expansion-panel-header>
-    </mat-expansion-panel>
-  </mat-card>
-</div>
+
 
 
 

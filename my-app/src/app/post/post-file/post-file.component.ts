@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Post } from '../../post.model';
+
 
 @Component({
   selector: 'app-post-file',
@@ -7,16 +9,19 @@ import { Component } from '@angular/core';
 })
 export class PostFileComponent {
   enteredValue = '';
-  posts: { text: string}[] = [];
+  @Output() postAdded = new EventEmitter<Post>();
 
   onAddPost() {
     if (this.enteredValue.trim() !== '') {
-      const newPost = {
-        text: this.enteredValue
-      }
-      this.posts.unshift(newPost);
+      const newPost: Post = {
+        id: 1,
+        content: this.enteredValue
+      };
+      this.postAdded.emit(newPost);
       this.enteredValue = '';
     }
   }
 }
+
+
 

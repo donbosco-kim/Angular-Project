@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { Post } from './post.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  posts: Post[] = [];
+
+  onPostAdded(newPost: Post) {
+    this.posts.unshift(newPost);
+  }
 }
+

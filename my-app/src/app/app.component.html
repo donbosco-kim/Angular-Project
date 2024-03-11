@@ -1,10 +1,10 @@
-<!-- src/app/app.component.html -->
 <main class="main">
   <div class="content">
     <app-header></app-header>
-    <app-post-file></app-post-file>
-    <app-post-list></app-post-list>
+    <app-post-file (postAdded)="onPostAdded($event)"></app-post-file>
+    <app-post-list [posts]="posts"></app-post-list>
   </div>
 </main>
+
 
 <router-outlet />
