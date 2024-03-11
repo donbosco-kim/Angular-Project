@@ -1,1 +1,12 @@
-<p>post-list works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Post List</mat-card-title>
+  </mat-card-header>
+
+  <mat-expansion-panel *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      <p>{{ post.text }}</p>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-card>
+

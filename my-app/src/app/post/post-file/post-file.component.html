@@ -2,8 +2,8 @@
 <!-- First mat-card with textarea and submit button -->
 <mat-card>
   <div style="width: 48%; float: left; padding: 10px;">
-    <textarea [(ngModel)]="newPostText" placeholder="Enter your post..."></textarea>
-    <button mat-raised-button color="primary" (click)="submitPost()">Submit</button>
+    <textarea [(ngModel)]="enteredValue" placeholder="Enter your post..."></textarea>
+    <button (click)="onAddPost()">Submit</button>
   </div>
 
   <!-- Second mat-card with mat-expansion-panel -->
@@ -11,9 +11,8 @@
     <mat-card>
       <mat-expansion-panel *ngFor="let post of posts">
         <mat-expansion-panel-header>
-          {{ post.timestamp | date:'medium' }}
+          <p>{{ post.text }}</p>
         </mat-expansion-panel-header>
-        <p>{{ post.text }}</p>
       </mat-expansion-panel>
     </mat-card>
   </div>
